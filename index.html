@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vishal Video</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="logo">
+    🎬 Vishal Video
+  </div>
+
+  <div class="nav">
+
+    <button id="homeBtn">
+      Home
+    </button>
+
+    <button id="accountBtn">
+      Login
+    </button>
+
+    <button id="adminBtn" class="hidden">
+      Admin
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<main id="homePage">
+
+  <section class="hero">
+
+    <h1>
+      Vishal Video
+    </h1>
+
+    <p>
+      अपनी पसंदीदा वीडियो देखें
+    </p>
+
+  </section>
+
+
+  <section class="searchSection">
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="वीडियो खोजें..."
+    >
+
+  </section>
+
+
+  <section class="categories">
+
+    <button data-category="all">
+      सभी
+    </button>
+
+    <button data-category="entertainment">
+      Entertainment
+    </button>
+
+    <button data-category="education">
+      Education
+    </button>
+
+    <button data-category="music">
+      Music
+    </button>
+
+    <button data-category="other">
+      Other
+    </button>
+
+  </section>
+
+
+  <h2 class="sectionTitle">
+    Latest Videos
+  </h2>
+
+
+  <section
+    id="videoContainer"
+    class="videoGrid"
+  >
+
+    <div class="loading">
+      Videos loading...
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- ================= ACCOUNT ================= -->
+
+<section
+  id="accountPage"
+  class="page hidden"
+>
+
+  <div class="authBox">
+
+    <h2>
+      Account
+    </h2>
+
+
+    <input
+      id="emailInput"
+      type="email"
+      placeholder="Email"
+    >
+
+
+    <input
+      id="passwordInput"
+      type="password"
+      placeholder="Password"
+    >
+
+
+    <button id="loginSubmit">
+      Login
+    </button>
+
+
+    <button id="registerSubmit">
+      नया Account बनाएं
+    </button>
+
+
+    <button
+      id="logoutBtn"
+      class="hidden"
+    >
+      Logout
+    </button>
+
+
+    <p id="authMessage"></p>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ADMIN ================= -->
+
+<section
+  id="adminPage"
+  class="page hidden"
+>
+
+  <div class="adminContainer">
+
+    <h1>
+      Admin Panel
+    </h1>
+
+    <p class="adminText">
+      यहाँ से अपनी Videos manage करें।
+    </p>
+
+
+    <!-- VIDEO FORM -->
+
+    <div class="adminCard">
+
+      <h2 id="formTitle">
+        नई Video जोड़ें
+      </h2>
+
+
+      <input
+        id="videoTitle"
+        type="text"
+        placeholder="Video का नाम"
+      >
+
+
+      <textarea
+        id="videoDescription"
+        placeholder="Video का विवरण"
+      ></textarea>
+
+
+      <select id="videoCategory">
+
+        <option value="entertainment">
+          Entertainment
+        </option>
+
+        <option value="education">
+          Education
+        </option>
+
+        <option value="music">
+          Music
+        </option>
+
+        <option value="other">
+          Other
+        </option>
+
+      </select>
+
+
+      <input
+        id="thumbnailUrl"
+        type="url"
+        placeholder="Thumbnail URL"
+      >
+
+
+      <input
+        id="videoUrl"
+        type="url"
+        placeholder="Direct Video URL"
+      >
+
+
+      <button id="saveVideoBtn">
+        Add Video
+      </button>
+
+
+      <button
+        id="cancelEditBtn"
+        class="hidden"
+      >
+        Cancel
+      </button>
+
+
+      <p id="adminMessage"></p>
+
+    </div>
+
+
+    <!-- ADMIN VIDEO LIST -->
+
+    <div class="adminCard">
+
+      <h2>
+        मेरी Videos
+      </h2>
+
+
+      <div id="adminVideoList">
+        Loading...
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= VIDEO PLAYER ================= -->
+
+<div
+  id="videoModal"
+  class="modal hidden"
+>
+
+  <div class="modalBox">
+
+    <button
+      id="closeModal"
+      class="closeButton"
+    >
+      ×
+    </button>
+
+
+    <video
+      id="videoPlayer"
+      controls
+      playsinline
+    ></video>
+
+
+    <h2 id="modalTitle"></h2>
+
+
+    <p id="modalDescription"></p>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <p>
+    © 2026 Vishal Video
+  </p>
+
+</footer>
+
+</body>
+  </html>
