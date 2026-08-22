@@ -1,0 +1,645 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: #f5f5f5;
+
+  color: #222;
+
+  min-height: 100vh;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 50;
+
+  min-height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 10px 15px;
+
+  background: white;
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,.08);
+}
+
+
+.logo {
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+
+.nav {
+
+  display: flex;
+
+  gap: 6px;
+}
+
+
+.nav button {
+
+  border: none;
+
+  background: #eeeeee;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+/* ================= COMMON ================= */
+
+.hidden {
+  display: none !important;
+}
+
+
+.page {
+
+  min-height:
+    calc(100vh - 120px);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+  margin: 15px;
+
+  padding: 40px 20px;
+
+  border-radius: 18px;
+
+  background: #111;
+
+  color: white;
+}
+
+
+.hero h1 {
+
+  font-size: 30px;
+
+  margin-bottom: 8px;
+}
+
+
+.hero p {
+
+  font-size: 15px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.searchSection {
+
+  padding:
+    5px 15px 15px;
+}
+
+
+#searchInput {
+
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 15px;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  background: white;
+}
+
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+
+  display: flex;
+
+  gap: 8px;
+
+  overflow-x: auto;
+
+  padding:
+    0 15px 15px;
+}
+
+
+.categories button {
+
+  border: none;
+
+  background: white;
+
+  padding:
+    9px 15px;
+
+  border-radius: 20px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+
+/* ================= TITLES ================= */
+
+.sectionTitle {
+
+  margin:
+    10px 15px 15px;
+}
+
+
+/* ================= VIDEO GRID ================= */
+
+.videoGrid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+
+  padding:
+    0 12px 30px;
+}
+
+
+.videoCard {
+
+  background: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.08);
+
+  cursor: pointer;
+
+  transition:
+    transform .15s;
+}
+
+
+.videoCard:active {
+
+  transform:
+    scale(.98);
+}
+
+
+.videoCard img {
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  display: block;
+
+  background: #ddd;
+}
+
+
+.videoInfo {
+
+  padding: 10px;
+}
+
+
+.videoTitle {
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  line-height: 1.35;
+}
+
+
+.videoCategory {
+
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  color: #777;
+}
+
+
+.loading {
+
+  grid-column:
+    1 / -1;
+
+  text-align: center;
+
+  padding: 40px;
+}
+
+
+/* ================= ACCOUNT ================= */
+
+.authBox {
+
+  width:
+    calc(100% - 30px);
+
+  max-width: 420px;
+
+  margin:
+    50px auto;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 3px 15px rgba(0,0,0,.08);
+}
+
+
+.authBox h2 {
+
+  margin-bottom: 20px;
+}
+
+
+.authBox input {
+
+  width: 100%;
+
+  height: 45px;
+
+  margin-bottom: 12px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+
+.authBox button {
+
+  width: 100%;
+
+  height: 44px;
+
+  margin-top: 8px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #111;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+#authMessage {
+
+  margin-top: 15px;
+
+  text-align: center;
+}
+
+
+/* ================= ADMIN ================= */
+
+.adminContainer {
+
+  width:
+    calc(100% - 30px);
+
+  max-width: 900px;
+
+  margin:
+    25px auto;
+}
+
+
+.adminContainer h1 {
+
+  margin-bottom: 5px;
+}
+
+
+.adminText {
+
+  color: #777;
+}
+
+
+.adminCard {
+
+  background: white;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,.07);
+}
+
+
+.adminCard h2 {
+
+  margin-bottom: 15px;
+}
+
+
+.adminCard input,
+.adminCard textarea,
+.adminCard select {
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 12px;
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+
+.adminCard textarea {
+
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+
+.adminCard button {
+
+  border: none;
+
+  padding:
+    11px 15px;
+
+  margin-right: 5px;
+
+  margin-bottom: 5px;
+
+  border-radius: 8px;
+
+  background: #111;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+
+.adminVideo {
+
+  padding:
+    15px 0;
+
+  border-top:
+    1px solid #eee;
+}
+
+
+.adminVideo:first-child {
+
+  border-top: none;
+}
+
+
+.adminVideo h3 {
+
+  margin-bottom: 6px;
+}
+
+
+.adminVideo p {
+
+  color: #777;
+
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+
+.editBtn {
+
+  background:
+    #555 !important;
+}
+
+
+.deleteBtn {
+
+  background:
+    #222 !important;
+}
+
+
+/* ================= VIDEO MODAL ================= */
+
+.modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  background:
+    rgba(0,0,0,.85);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px;
+}
+
+
+.modalBox {
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  background: white;
+
+  padding: 15px;
+
+  border-radius: 15px;
+}
+
+
+#videoPlayer {
+
+  width: 100%;
+
+  max-height: 70vh;
+
+  background: black;
+
+  border-radius: 10px;
+}
+
+
+#modalTitle {
+
+  margin-top: 15px;
+}
+
+
+#modalDescription {
+
+  margin-top: 8px;
+
+  color: #666;
+
+  line-height: 1.5;
+}
+
+
+.closeButton {
+
+  position: absolute;
+
+  right: 8px;
+
+  top: 8px;
+
+  z-index: 5;
+
+  width: 35px;
+
+  height: 35px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+  background: #111;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 20px;
+
+  margin-top: 20px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .logo {
+
+    font-size: 17px;
+  }
+
+
+  .nav button {
+
+    padding:
+      7px 8px;
+
+    font-size: 12px;
+  }
+
+
+  .hero h1 {
+
+    font-size: 25px;
+  }
+
+}
+
+
+@media (min-width: 700px) {
+
+  .videoGrid {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  }
